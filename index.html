@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Page</title>
+
+    <style>
+        #main-product-img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 0 20px 0 20px;
+            box-shadow: 0 0 15px 0 #595959;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .product-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .product-images-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="full-dress.png" id="main-product-img">
+
+    <div class="product-images-container">
+        <img src="full-dress.png" class="product-img" onclick="changeimg('full-dress.png')">
+        <img src="upper-shirt.png" class="product-img" onclick="changeimg('upper-shirt.png')">
+        <img src="middle-shirt.png" class="product-img" onclick="changeimg('middle-shirt.png')">
+        <img src="all-dress-model.png" class="product-img" onclick="changeimg('all-dress-model.png')">
+    </div>
+
+    <script>
+        function changeimg(imagename) {
+            const mainimg = document.getElementById("main-product-img");
+
+            mainimg.src = imagename;
+        }
+    </script>
+</body>
+
+</html>
